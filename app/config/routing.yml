@@ -1,0 +1,5 @@
+nectalis_mini_doc:
+    resource: "@NectalisMiniDocBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
