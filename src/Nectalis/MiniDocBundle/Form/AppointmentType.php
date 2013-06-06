@@ -13,6 +13,7 @@ class AppointmentType extends AbstractType
         $builder
             ->add('patientName')
             ->add('startDate')
+            ->add('durationMinutes')
         ;
     }
 

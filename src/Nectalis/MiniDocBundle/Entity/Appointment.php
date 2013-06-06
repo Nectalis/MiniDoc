@@ -35,6 +35,13 @@ class Appointment
      */
     private $startDate;
 
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="durationMinutes", type="integer", length=255)
+     */
+    private $durationMinutes;
+
 
     /**
      * Get id
@@ -91,4 +98,29 @@ class Appointment
     {
         return $this->startDate;
     }
+
+    /**
+     * Set durationMinutes
+     *
+     * @param integer $durationMinutes
+     * @return Appointment
+     */
+    public function setDurationMinutes($durationMinutes)
+    {
+        $this->durationMinutes = $durationMinutes;
+    
+        return $this;
+    }
+
+    /**
+     * Get durationMinutes
+     *
+     * @return integer 
+     */
+    public function getDurationMinutes()
+    {
+        return $this->durationMinutes;
+    }
+
+
 }
