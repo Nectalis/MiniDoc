@@ -12,6 +12,20 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Appointment
 {
+
+    /**
+     * Get the computed end date by adding the duration to the start date
+     *
+     * @return \DateTime 
+     */
+
+    public function getEndDate() {
+        $durationInterval = new DateInterval('PT'.$this->getDurationMinutes().'M');
+        return $this->getStartDate()->add($durationInterval);
+    }
+
+
+
     /**
      * @var integer
      *
